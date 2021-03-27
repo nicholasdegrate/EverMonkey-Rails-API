@@ -10,7 +10,7 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 
-gem 'jsonapi-serializer'
+gem 'jsonapi-serializers'
 
 gem 'activerecord-reset-pk-sequence'
 # Use Redis adapter to run Action Cable in production
