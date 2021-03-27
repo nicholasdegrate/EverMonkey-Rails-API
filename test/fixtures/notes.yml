@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  paragraph: MyText
+  priority: 1
+  note_book: one
+  delete: false
+
+two:
+  name: MyString
+  paragraph: MyText
+  priority: 1
+  note_book: two
+  delete: false
