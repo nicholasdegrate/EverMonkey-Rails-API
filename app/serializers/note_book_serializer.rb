@@ -1,7 +1,8 @@
-class NoteSerializer < BaseSerializer
+class NoteBookSerializer < BaseSerializer
     attribute :name
-    attribute :paragraph
-    attribute :note_book_id
+    attribute :user_id
     attribute :delete_object
+
+    has_many :notes 
 end
   
