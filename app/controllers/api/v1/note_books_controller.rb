@@ -5,4 +5,20 @@ class Api::V1::NoteBooksController < Api::V1::BaseController
         note_books = NoteBook.all
         render json: serialize_models(note_books), status: :ok
     end
+
+    def create
+        note_book = NoteBook.create(note_book_params)
+        if note_book.save
+            render json: serialize_model(note_book)
+        else
+            render json: serialize_model_error(note_book.errors)
+        end
+    end
+
+    private
+
+    def note_book_params
+        params.require(:note_book).permit(:name, :user_id, :delete_object)
+        
+    end
 end
