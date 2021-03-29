@@ -9,20 +9,15 @@ Note.reset_pk_sequence
 nick = User.create!(
     username: "nick",
     email: 'nicholasdegrate@gmail.com',
-    profile_image: 'https://images.unsplash.com/photo-1616627687031-229fa00cfe07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
+    profile_image: ''
 )
 
-nick0 = User.create!(
+jeff = User.create!(
     username: "nick",
     email: 'nicholasdegrate@gmail.com',
     profile_image: 'https://images.unsplash.com/photo-1616627687031-229fa00cfe07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
 )
 
-nick1 = User.create!(
-    username: "nick",
-    email: 'nicholasdegrate@gmail.com',
-    profile_image: 'https://images.unsplash.com/photo-1616627687031-229fa00cfe07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
-)
 
 
 learning = NoteBook.create!(
@@ -30,10 +25,21 @@ learning = NoteBook.create!(
     user_id: nick.id,
     delete_object: false
 )
+learning = NoteBook.create!(
+    name: 'hello',
+    user_id: nick.id,
+    delete_object: false
+)
+learning = NoteBook.create!(
+    name: 'bye',
+    user_id: nick.id,
+    delete_object: false
+)
+
 
 learning1 = NoteBook.create!(
     name: 'Learning',
-    user_id: nick0.id,
+    user_id: jeff.id,
     delete_object: false
 )
 
