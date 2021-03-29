@@ -25,17 +25,6 @@ learning = NoteBook.create!(
     user_id: nick.id,
     delete_object: false
 )
-learning = NoteBook.create!(
-    name: 'hello',
-    user_id: nick.id,
-    delete_object: false
-)
-learning = NoteBook.create!(
-    name: 'bye',
-    user_id: nick.id,
-    delete_object: false
-)
-
 
 learning1 = NoteBook.create!(
     name: 'Learning',
