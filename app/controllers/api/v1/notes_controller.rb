@@ -12,7 +12,7 @@ class Api::V1::NotesController < Api::V1::BaseController
 
     def create
 
-        note = Note.create(note_params)
+        note = Note.find_or_create_by(note_params)
 
         if note.save
             render json: serialize_model(note)
@@ -21,19 +21,10 @@ class Api::V1::NotesController < Api::V1::BaseController
         end
     end
 
-    def update
-        note = Note.find(params[:id])
-        render json: serialize_model(note), status: :ok   
-    end
-
-    def destroy
-        note = Note.find(params[:id])
-        note.destroy
-    end
-
     private
 
         def note_params
+            # require !==
             params.require(:note).permit(:name, :paragraph, :note_book_id, :delete_object)
         end
 end
