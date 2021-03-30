@@ -21,6 +21,13 @@ class Api::V1::NotesController < Api::V1::BaseController
         end
     end
 
+    def update
+        note = Note.find(params[:id])
+        note = Note.update(note_params)
+        render json: serialize_models(note), status: :ok
+
+    end
+
     private
 
         def note_params
