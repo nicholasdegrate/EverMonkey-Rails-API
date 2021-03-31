@@ -7,7 +7,7 @@ class Api::V1::NotesController < Api::V1::BaseController
 
     def show
         note = Note.find(params[:id])
-        render json: serialize_model(note), status: :ok
+        render json: serialize_model(note, include: ['attached-files']), status: :ok
     end
 
     def create

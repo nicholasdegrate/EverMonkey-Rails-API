@@ -3,6 +3,6 @@ class UserSerializer < BaseSerializer
     attribute :email
     attribute :profile_image
 
-    has_many :note_books 
+    has_many :note_books
 end
   

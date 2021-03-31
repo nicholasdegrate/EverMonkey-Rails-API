@@ -43,6 +43,14 @@ javascript = Note.create!(
 )
 
 
+
+java = AttachedFile.create!(
+    name: 'JavaScript',
+    file: 'iehaiofhdiaohfiawefwaf',
+    note_id: javascript.id,
+)
+
+
 javascript0 = Note.create!(
     name: 'JavaScript',
     paragraph: 'As you are probably aware, both string and text save “string-type” information that you can freely write in. The difference between the two is how many characters you can put in these fields.

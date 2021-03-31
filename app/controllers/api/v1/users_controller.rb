@@ -7,7 +7,7 @@ class Api::V1::UsersController < Api::V1::BaseController
 
     def show
         user = User.find(params[:id])
-        render json: serialize_model(user, include: ['note-books', 'note-books.notes']), status: :ok
+        render json: serialize_model(user, include: ['note-books', 'note-books.notes', 'note-books.notes.attached-files']), status: :ok
     end
 
     def create

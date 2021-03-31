@@ -5,5 +5,7 @@ class NoteSerializer < BaseSerializer
     attribute :delete_object
     attribute :created_at
     attribute :updated_at
+
+    has_many :attached_files
 end
   
