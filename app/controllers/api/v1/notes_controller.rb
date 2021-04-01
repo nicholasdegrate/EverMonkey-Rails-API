@@ -26,6 +26,12 @@ class Api::V1::NotesController < Api::V1::BaseController
         note.update(note_params)
         render json: serialize_model(note), status: :ok
     end
+
+    def destroy
+        note = Note.find(params[:id])
+        note.destroy
+    end
+
     private
 
         def note_params
