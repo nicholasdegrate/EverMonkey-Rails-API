@@ -21,6 +21,13 @@ class Api::V1::UsersController < Api::V1::BaseController
         end
     end
 
+    def update
+        user = User.find(params[:id])
+        user.update(user_params)
+        render json: serialize_model(user), status: :ok
+    end
+
+
     private
 
         def user_params
