@@ -1,25 +1,11 @@
-# README
+# EverMonkey is an elegant single page note taking app designed for keeping track of your busy work week!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+<h3>Tech Stack</h3>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# EverMonkey-Rails-API
+<ul>
+    <li>JavaScript</li>
+    <li>Ruby on Rails</li>
+    <li>JSONAPI-serializers</li>
+    <li>postgresql</li>
+</ul>
